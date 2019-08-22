@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.CityText = new System.Windows.Forms.TextBox();
@@ -39,6 +40,9 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.History = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.removeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
@@ -137,13 +141,28 @@
             // 
             // History
             // 
+            this.History.ContextMenuStrip = this.contextMenuStrip1;
             this.History.Font = new System.Drawing.Font("MV Boli", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.History.FormattingEnabled = true;
             this.History.ItemHeight = 25;
             this.History.Location = new System.Drawing.Point(248, 85);
             this.History.Name = "History";
+            this.History.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.History.Size = new System.Drawing.Size(256, 179);
             this.History.TabIndex = 11;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.removeToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(118, 26);
+            // 
+            // removeToolStripMenuItem
+            // 
+            this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
+            this.removeToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.removeToolStripMenuItem.Text = "Remove";
             // 
             // AppName
             // 
@@ -166,6 +185,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "AppName";
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +204,8 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.ListBox History;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem removeToolStripMenuItem;
     }
 }
 

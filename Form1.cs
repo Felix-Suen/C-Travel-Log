@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections;
 
 namespace Travel
 {
@@ -50,8 +51,18 @@ namespace Travel
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
+            if (History.Items.Count == 0)
+            {
+                
+            }
+            else
+            {
+                History.Items.RemoveAt(History.SelectedIndex + 1);
+            }
             
         }
+
+        
     }
 
     class Location
